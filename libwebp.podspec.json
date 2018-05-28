@@ -15,8 +15,8 @@
   },
   "requires_arc" : false,
   "source" : {
-    "git" : "https://chromium.googlesource.com/webm/libwebp",
-    "tag" : "v0.6.0"
+    "git" : "https://github.com/webmproject/libwebp.git",
+    "tag" : "v1.0.0"
   },
   "subspecs" : [
     {
@@ -76,5 +76,5 @@
     }
   ],
   "summary" : "Library to encode and decode images in WebP format.",
-  "version" : "0.6.0"
+  "version" : "1.0.0"
 }
