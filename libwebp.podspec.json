@@ -1,0 +1,80 @@
+{
+  "authors" : "Google Inc.",
+  "compiler_flags" : "-D_THREAD_SAFE",
+  "homepage" : "https://developers.google.com/speed/webp/",
+  "license" : {
+    "file" : "COPYING",
+    "type" : "BSD"
+  },
+  "name" : "libwebp",
+  "platforms" : {
+    "ios" : null,
+    "osx" : null,
+    "tvos" : null,
+    "watchos" : null
+  },
+  "requires_arc" : false,
+  "source" : {
+    "git" : "https://chromium.googlesource.com/webm/libwebp",
+    "tag" : "v0.6.0"
+  },
+  "subspecs" : [
+    {
+      "header_dir" : "webp",
+      "name" : "webp",
+      "source_files" : "src/webp/*.h"
+    },
+    {
+      "dependencies" : {
+        "libwebp/webp" : []
+      },
+      "name" : "core",
+      "source_files" : [
+        "src/utils/*.{h,c}",
+        "src/dsp/*.{h,c}",
+        "src/enc/*.{h,c}",
+        "src/dec/*.{h,c}"
+      ]
+    },
+    {
+      "dependencies" : {
+        "libwebp/core" : []
+      },
+      "name" : "utils"
+    },
+    {
+      "dependencies" : {
+        "libwebp/core" : []
+      },
+      "name" : "dsp"
+    },
+    {
+      "dependencies" : {
+        "libwebp/core" : []
+      },
+      "name" : "enc"
+    },
+    {
+      "dependencies" : {
+        "libwebp/core" : []
+      },
+      "name" : "dec"
+    },
+    {
+      "dependencies" : {
+        "libwebp/core" : []
+      },
+      "name" : "demux",
+      "source_files" : "src/demux/*.{h,c}"
+    },
+    {
+      "dependencies" : {
+        "libwebp/core" : []
+      },
+      "name" : "mux",
+      "source_files" : "src/mux/*.{h,c}"
+    }
+  ],
+  "summary" : "Library to encode and decode images in WebP format.",
+  "version" : "0.6.0"
+}
